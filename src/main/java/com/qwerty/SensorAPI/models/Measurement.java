@@ -49,7 +49,7 @@ public class Measurement {
         this.value = value;
     }
 
-    public Boolean getRaining() {
+    public Boolean isRaining() {
         return raining;
     }
 
