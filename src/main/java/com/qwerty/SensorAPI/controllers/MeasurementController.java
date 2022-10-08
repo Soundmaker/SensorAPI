@@ -1,7 +1,7 @@
 package com.qwerty.SensorAPI.controllers;
 
 import com.qwerty.SensorAPI.dto.MeasurementDTO;
-import com.qwerty.SensorAPI.dto.MeasurementResponse;
+import com.qwerty.SensorAPI.dto.MeasurementsResponse;
 import com.qwerty.SensorAPI.models.Measurement;
 import com.qwerty.SensorAPI.services.MeasurementService;
 import com.qwerty.SensorAPI.util.MeasurementErrorResponse;
@@ -52,8 +52,8 @@ public class MeasurementController {
     }
 
     @GetMapping()
-    public MeasurementResponse getMeasurements() {
-        return new MeasurementResponse(measurementService.findAll().stream().map(this::convertToMeasurementDTO)
+    public MeasurementsResponse getMeasurements() {
+        return new MeasurementsResponse(measurementService.findAll().stream().map(this::convertToMeasurementDTO)
                 .collect(Collectors.toList()));
     }
 
